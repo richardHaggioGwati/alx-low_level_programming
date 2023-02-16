@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+/* main is the function body */
 int main(void) {
-	printf("with proper grammar, but the outcome is a piece of art,")
-	return 0
+/* function prinf prints a message */
+printf("with proper grammar, but the outcome is a piece of art,");
+return (0);
 }
