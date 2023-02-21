@@ -1,6 +1,3 @@
-/**
- * Prototype are placed in here
- */
 #include <stdio.h>
 
 void print_alphabet(void) {
