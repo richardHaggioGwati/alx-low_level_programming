@@ -1,10 +1,8 @@
-/**
- * Prints _putchar, followed by a new line.
- */
 #include <stdio.h>
-
 /**
  * Function main will print out the desired result using printf
+ *
+ * Prints _putchar, followed by a new line.
  */
 int main(void)
 {
