@@ -1,9 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * int add(int, int); - add's 2 intergers
+ * print_to_98 - prints all natural numbers from n to 98, followed by a new line.
  * return: the result of the operation
  */
 void print_to_98(int n)
 {
-    return (a + b);
+    if (n <= 98)
+{
+    for (int i = n; i < 98; i++)
+{
+    _putchar("%d, ", i);
+}
+}
+else
+{
+    for (int i = n; i > 98; i--)
+{
+    _putchar("%d, ", i);
+}
+}
+    _putchar("98\n");
 }
