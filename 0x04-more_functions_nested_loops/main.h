@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 extern int _isupper(int c);
+extern int _isdigit(int c);
 
 #endif /* MAIN_H */
