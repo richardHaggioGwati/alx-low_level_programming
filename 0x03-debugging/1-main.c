@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
-* main - causes an infinite loop
+* main - code that is causing the output to go into an infinite loop.
+* @void: function will take no arguments
 * Return: 0
 */
 
