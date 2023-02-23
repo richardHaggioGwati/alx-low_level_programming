@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
-* __isdigit -  checks for digits.
+* __isdigit - checks for digits.
 * @c: receives values
 * Return: 1 if c is digit else return 0
 */
