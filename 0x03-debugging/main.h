@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
-void positive_or_negative(int i);
+extern void positive_or_negative(int i);
+extern int largest_number(int a, int b, int c)
 
 #endif /* MAIN_H */
