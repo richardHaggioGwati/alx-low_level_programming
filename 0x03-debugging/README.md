@@ -1,0 +1,3 @@
+# C - Debugging
+
+Debugging is the process of identifying, analyzing, and fixing errors, bugs, and defects in software programs or systems. It involves examining the code or system behavior to locate the source of the problem, isolating it, and correcting the error to ensure that the program or system performs as expected. Debugging can be a complex and time-consuming process, and may involve using specialized tools and techniques such as logging, breakpoints, and tracing to identify and resolve issues. Effective debugging is essential for ensuring the reliability, quality, and functionality of software applications and systems.
