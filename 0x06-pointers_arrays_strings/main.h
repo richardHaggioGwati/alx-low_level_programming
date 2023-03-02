@@ -10,6 +10,7 @@ extern void reverse_array(int *a, int n);
 extern char *string_toupper(char *);
 extern char *cap_string(char *);
 extern char *leet(char *str);
+extern char *rot13(char *);
 
 #endif /* MAIN_H */
  
