@@ -9,6 +9,7 @@ extern int _strcmp(char *s1, char *s2);
 extern void reverse_array(int *a, int n);
 extern char *string_toupper(char *);
 extern char *cap_string(char *);
+extern char *leet(char *str);
 
 #endif /* MAIN_H */
  
