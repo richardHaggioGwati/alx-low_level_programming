@@ -11,6 +11,9 @@ extern char *string_toupper(char *);
 extern char *cap_string(char *);
 extern char *leet(char *str);
 extern char *rot13(char *);
+extern void print_number(int n);
+extern char *infinite_add(char *n1, char *n2, char *r, int size_r);
+extern void print_buffer(char *b, int size);
 
 #endif /* MAIN_H */
  
