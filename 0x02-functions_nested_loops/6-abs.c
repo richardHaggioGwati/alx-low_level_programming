@@ -7,7 +7,12 @@
  */
 int _abs(int i)
 {
-    int c = abs(i);
-    _putchar(c);
-    return (0);
+int abs_value;
+
+if (i < 0)
+{
+i = i * (-1);
+}
+abs_value = i;
+return (abs_value);
 }
