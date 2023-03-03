@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-*main - Entry Point
+*main - entry Point
 *Description - 'print putchar.'
 *Return: 0
 */
