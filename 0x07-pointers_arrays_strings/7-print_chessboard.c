@@ -2,8 +2,7 @@
 
 /**
 * print_chessboard - print a chessboard
-* @haystack:  string to search
-* @needle: first occurrence of the substring
+* @a: points to size of chessboard
 * Return: void
 */
 
