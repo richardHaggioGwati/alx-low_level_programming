@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 /**
- * Function main will print out the desired result using printf
- *
- * Prints _putchar, followed by a new line.
+ * main - prints _putchar, followed by a new line.
+ * Return: return 0
  */
+
 int main(void)
 {
 printf("_putchar\n");
