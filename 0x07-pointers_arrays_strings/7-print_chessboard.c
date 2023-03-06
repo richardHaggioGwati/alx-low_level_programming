@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 
 /**
 * print_chessboard - print a chessboard
@@ -17,6 +18,6 @@ for (j = 0; j < 8; j++)
 {
 _putchar(a[i][j]);
 }
-_putchar("\n");
+_putchar('\n');
 }
 }
