@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _pow_recursion - power function
- * @x: value to be raise
- * @y: raised by value
- * Return: integer
+ * helper - natural square root of a number
+ * @n: receives number from _sqrt_recursion
+ * @i: 1
+ * Return: natural number
  */
 
 int helper(int n, int i)
@@ -22,6 +22,12 @@ else
 return (helper(n, i + 1));
 }
 }
+
+/**
+ * _sqrt_recursion - natural square root of a number
+ * @n: number to check
+ * Return: natural numbers
+ */
 
 int _sqrt_recursion(int n)
 {
