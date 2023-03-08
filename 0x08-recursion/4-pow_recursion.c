@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * pow_recursion - power function
- * @x: value to be raise 
+ * _pow_recursion - power function
+ * @x: value to be raise
  * @y: raised by value
  * Return: integer
  */
