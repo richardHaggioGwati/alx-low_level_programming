@@ -2,9 +2,9 @@
 
 /**
  * wildcmp - compares two strings
- * @s: string to be check
+ * @s1: string to be check
  * @s2: can contain the special character
- * Return:  returns 1 if the strings can be considered identical, otherwise return 0
+ * Return:  returns 1 for identical, otherwise return 0
  */
 
 int wildcmp(char *s1, char *s2)
