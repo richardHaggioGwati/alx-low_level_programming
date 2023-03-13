@@ -67,12 +67,12 @@ char **words;
 const char *word_start = NULL;
 char *p;
 
-if (str == NULL || *str == '\0')
+if (str == NULL || *str == '\0' || (strlen(str) == 1 && isspace(*str)))
 {
 return (NULL);
 }
 num_words = count_words(str);
-words = (char **)malloc((num_words + 1) * sizeof(char *));\
+words = (char **)malloc((num_words + 1) * sizeof(char *));
 if (words == NULL)
 {
 return (NULL);
@@ -116,7 +116,7 @@ for (i = 0; i < word_index; i++)
 free(words[i]);
 }
 free(words);
-return NULL;
+return (NULL);
 }
 word_index++;
 }
