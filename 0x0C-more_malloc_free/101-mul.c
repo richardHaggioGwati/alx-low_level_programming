@@ -78,21 +78,21 @@ return (1);
  */
 int main(int argc, char **argv)
 {
-    char *num1 = argv[1];
-    char *num2 = argv[2];
-    char *res = multiply(num1, num2);
+char *num1 = argv[1];
+char *num2 = argv[2];
+char *res = multiply(num1, num2);
 
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return 98;
-    }
-    if (!is_digit_string(argv[1]) || !is_digit_string(argv[2]))
-    {
-        printf("Error\n");
-        return 98;
-    }
-    printf("%s\n", res);
-    free(res);
-    return 0;
+if (argc != 3)
+{
+printf("Error\n");
+return (98);
+}
+if (!is_digit_string(argv[1]) || !is_digit_string(argv[2]))
+{
+printf("Error\n");
+return (98);
+}
+printf("%s\n", res);
+free(res);
+return (0);
 }
