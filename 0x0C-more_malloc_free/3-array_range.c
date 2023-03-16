@@ -15,7 +15,7 @@ if (min > max)
 return (NULL);
 }
 num_elements = max - min + 1;
-result = malloc(num_elements * sizeof(int));
+result = malloc(num_elements *sizeof(int));
 if (result == NULL)
 {
 return (NULL);
