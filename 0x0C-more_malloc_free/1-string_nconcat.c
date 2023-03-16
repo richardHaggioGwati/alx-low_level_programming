@@ -7,28 +7,31 @@
  * @str: The string to get the length of.
  * Return: The length of the string.
  */
-unsigned int string_len(char *str) {
+unsigned int string_len(char *str)
+{
 if (str == NULL)
 {
 return (0);
 }
 else
 {
-return strlen(str);
+return (strlen(str));
 }
 }
 
 /**
- * string_copy - Copies a string into a newly allocated memory block, 
+ * string_copy - Copies a string into a newly allocated memory block
  * @str: The string to copy.
  * Return: A pointer to a newly allocated string
  */
-char *string_copy(char *str) {
+char *string_copy(char *str)
+{
 unsigned int len = string_len(str);
 char *result = malloc(len + 1);
 
-if (result == NULL) {
-return NULL;
+if (result == NULL)
+{
+return (NULL);
 }
 else
 {
