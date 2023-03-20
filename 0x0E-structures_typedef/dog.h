@@ -8,11 +8,12 @@
  * @age: age of the dog
  * @owner: owner of the dog
  */
-struct dog
+extern struct dog
 {
 char *name;
 float age;
 char *owner;
 };
+extern void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
