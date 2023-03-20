@@ -4,8 +4,7 @@
 /**
  * free_dog - free the dog stored in memory
  * @d: - pointer to the dog
- * 
- * Returns: void 
+ * Returns: void
 */
 void free_dog(dog_t *d)
 {
