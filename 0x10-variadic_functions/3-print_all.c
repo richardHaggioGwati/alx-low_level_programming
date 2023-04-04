@@ -10,52 +10,51 @@
  */
 void print_all(const char *const format, ...)
 {
-    char c_val;
-    const char *f = format;
-    int i_val;
-    float f_val;
-    char *s_val;
-    va_list arg_list;
-    va_start(arg_list, format);
+    const char *p = format;
+    char c;
+    int i;
+    float f;
+    char *s;
+    va_list args;
+    va_start(args, format);
 
-
-    while (*f)
+    while (*p != '\0')
     {
-        if (*f == 'c')
+        if (*p == 'c')
         {
-            c_val = (char)va_arg(arg_list, int);
-            printf("%c", c_val);
+            c = va_arg(args, int);
+            printf("%c", c);
         }
-        else if (*f == 'i')
+        else if (*p == 'i')
         {
-            i_val = va_arg(arg_list, int);
-            printf("%d", i_val);
+            i = va_arg(args, int);
+            printf("%d", i);
         }
-        else if (*f == 'f')
+        else if (*p == 'f')
         {
-            f_val = (float)va_arg(arg_list, double);
-            printf("%f", f_val);
+            f = va_arg(args, double);
+            printf("%f", f);
         }
-        else if (*f == 's')
+        else if (*p == 's')
         {
-            s_val = va_arg(arg_list, char *);
-            if (s_val == NULL)
+            s = va_arg(args, char *);
+            if (s == NULL)
             {
                 printf("(nil)");
             }
             else
             {
-                printf("%s", s_val);
+                printf("%s", s);
             }
         }
 
-        f++;
-        if (*format)
+        p++;
+        if (*p)
         {
             printf(", ");
         }
     }
 
-    va_end(arg_list);
     printf("\n");
+    va_end(args);
 }
