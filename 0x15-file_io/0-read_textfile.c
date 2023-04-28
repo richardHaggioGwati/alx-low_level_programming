@@ -1,6 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+
+
+/**
+ * _strlen - count len of string
+ * @s: string pointer
+ * Return: len of string
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
 
 /**
  * read_textfile - Reads a text file and prints it to the POSIX standard output.
@@ -15,45 +28,40 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    FILE *file;
-    char *buffer;
-    ssize_t bytes_read, bytes_written;
-    
-    if (filename == NULL)
-    {
-        return 0;
-    }
+ssize_t value;
+char *buffer;
+int file, reading;
 
-    file = fopen(filename, "r");
-    if (file == NULL)
-    {
-        return 0;
-    }
-
-    buffer = (char *)malloc(sizeof(char) * letters);
-    if (buffer == NULL)
-    {
-        fclose(file);
-        return 0;
-    }
-
-    bytes_read = fread(buffer, sizeof(char), letters, file);
-    if (bytes_read <= 0)
-    {
-        fclose(file);
-        free(buffer);
-        return 0;
-    }
-
-    bytes_written = fwrite(buffer, sizeof(char), bytes_read, stdout);
-    if (bytes_written != bytes_read)
-    {
-        fclose(file);
-        free(buffer);
-        return 0;
-    }
-
-    fclose(file);
-    free(buffer);
-    return bytes_written;
+buffer = malloc(sizeof(char) * letters);
+file = open(filename, O_RDONLY);
+if (file == -1)
+{
+return (0);
+}
+if (!buffer)
+{
+free(buffer);
+return (0);
+}
+reading = read(file, buffer, letters);
+if (reading == -1)
+{
+return (0);
+}
+value = _strlen(buffer);
+value = write(STDOUT_FILENO, buffer, value);
+if (value == -1)
+{
+free(buffer);
+return (0);
+}
+free(buffer);
+if (close(file) == -1)
+{
+return (-1);
+}
+else
+{
+return (value);
+}
 }

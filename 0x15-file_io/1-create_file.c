@@ -1,48 +1,50 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
 #include "main.h"
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-
 /**
- * create_file - Creates a file with the specified name and writes the specified
- *               text content to it.
- *
- * @filename: The name of the file to create.
- * @text_content: A NULL-terminated string containing the text to write to the file.
- *
- * Return: 1 on success, -1 on failure (file cannot be created, cannot be written,
- *         write "fails", etc.).
- *
- * If the file already exists, it is truncated. The file has permissions set to
- * rw-------. If @filename is NULL, the function returns -1. If @text_content is
- * NULL, an empty file is created.
+ * _strlen - funtion count len of char.
+ * @s: count string.
+ * Return: string.
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+/**
+ * create_file - create file function
+ * @filename: file name.
+ * @text_content: text of file
+ * Return: 1 ok, -1 error.
  */
 int create_file(const char *filename, char *text_content)
 {
-    int fd;
+int value, len, x;
 
-    if (filename == NULL)
-    {
-        return -1;
-    }
-    fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-    if (fd == -1)
-    {
-        return -1;
-    }
-    if (text_content != NULL)
-    {
-        ssize_t bytes_written = write(fd, text_content, strlen(text_content));
-        if (bytes_written == -1)
-        {
-            close(fd);
-            return -1;
-        }
-    }
-
-    close(fd);
-    return 1;
+if (filename == NULL)
+{
+return (-1);
+}
+value  = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+if (value == -1)
+return (-1);
+if (text_content == NULL)
+{
+if (close(value) == -1)
+{
+return (-1);
+}
+else
+{
+return (1);
+}
+}
+len = _strlen(text_content);
+x = write(value, text_content, len);
+if (x == -1)
+{
+return (-1);
+}
+return (1);
 }
